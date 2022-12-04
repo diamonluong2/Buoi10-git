@@ -1,3 +1,5 @@
+git config --global user.name "Luong Vo"
+git config --global user.email "diamonluong" 
 -git init:  Khởi tạo git cho một project ( chỉ cần dùng 1 lần duy nhất)
 
 -git add:Sắp xếp cái file đã bị thay đổi, thêm mới or xóa so với lần commit trước đó, để chuẩn bị cho lần commit tiếp theo
@@ -14,3 +16,7 @@
 
  -git push: đẩy tất cả commit lên trên remote repository
  -git clone: tải remote repository về máy tính
+
+ -git checkout: chuyển sang một branch khác
+  + git checkout branch-name: chuyển branch
+  + git checkout -b branch-name: Tạo branch
