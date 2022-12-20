@@ -1,43 +1,63 @@
 // Mô hình 3 khối 
 // Bài tập tự luyện 1 
-let ab = 3;
-let ac = 4;
+let ab = document.getElementById("A-B");
+let ac = document.getElementById("A-C");
+let tinhBC = document.getElementById("tinh-BC");
+tinhBC.onclick = function(){
+    let bc = Math.sqrt(parseInt(ab.value) ** 2 + parseInt(ac.value) ** 2);
+    let hBC = "<h3>" + "Kết quả cạnh BC là: " + bc + "</h3>";
+    let tBC = document.getElementById("B-C");
+    tBC.innerHTML = hBC;
+}
 
-let bc = Math.sqrt(ab ** 2 + ac ** 2)
-console.log("cạnh huyền bc là: ", bc);
 
-// Bài tập tự luyện 2 
-let n = 361;
+// Bài tập tự luyện 2
+let so3So = document.getElementById("so3chu");
 let total = 0;
-
-total = n % 10;
-console.log("total là: ", total);
-n = Math.floor(n/10);
-total += n % 10;
-console.log("total là: ", total);
-n = Math.floor(n/10);
-total += n % 10;
-console.log("total là: ", total);
+let tinh3So = document.getElementById("tinh-3so");
+tinh3So.onclick = function(){
+    let n = parseInt(so3So.value);
+    total = n % 10;
+    n = Math.floor(n/10);
+    total += n % 10;
+    console.log(total);
+    n = Math.floor(n/10);
+    total += n % 10;
+    console.log(total);
+    let h3so = "<h3>" + "Kết quả tổng 3 số là: " + total + "</h3>";
+    let t3so = document.getElementById("tinh3so");
+    t3so.innerHTML = h3so;
+}
 
 // Bài tập tự luyện 3 
-let tenPhim = "Avatar";
-let giaVeNguoiLon = 100000;
-let giaVeTreEm = 50000;
-let soVeNguoiLon = 5;
-let soVeTreEm = 10;
-let phanTram = 0.2;
+let tenPhim = document.getElementById("ten-phim");
+let giaVeNguoiLon = document.getElementById("ve-nglon");
+let giaVeTreEm = document.getElementById("ve-treem");
+let soVeNguoiLon = document.getElementById("so-nglon");
+let soVeTreEm = document.getElementById("so-treem");
+let phanTram = document.getElementById("tu-thien");
+let tinhVe = document.getElementById("tinh-ve");
+tinhVe.onclick = function(){
+    giaVeL = parseInt(giaVeNguoiLon.value);
+    giaVeT = parseInt(giaVeTreEm.value);
+    soVeL = parseInt(soVeNguoiLon.value);
+    soVeT = parseInt(soVeTreEm.value);
+    soPT = parseInt(phanTram.value)/100;
 
-let tongVeBan = soVeNguoiLon + soVeTreEm;
-let tongDoanhThu = giaVeNguoiLon*soVeNguoiLon + giaVeTreEm*soVeTreEm;
-let tienTuThien = tongDoanhThu * phanTram;
-let tienConLai = tongDoanhThu - tienTuThien;
+    let tongVeBan = soVeL + soVeT;
+    let tongDoanhThu = giaVeL*soVeL + giaVeT*soVeT;
+    let tienTuThien = tongDoanhThu * soPT;
+    let tienConLai = tongDoanhThu - tienTuThien;
 
-console.log("Tên phim:.............................. ", tenPhim);
-console.log("Số vé đã bán:.......................... ", tongVeBan);
-console.log("Doanh thu:............................. ", tongDoanhThu);
-console.log("Trích % từ thiện:...................... ", phanTram);
-console.log("Tổng tiền trích từ thiện:.............. ", tienTuThien);
-console.log("Tổng doanh thu sau khi trừ:............ ", tienConLai);
+    let hTenPhim = "<h3>" + "Tên phim:.............................. " + tenPhim.value + "</h3>";
+    let hSoVe =  "<h3>" + "Số vé đã bán:.......................... " + tongVeBan + "</h3>";
+    let hDoanhThu =  "<h3>" + "Doanh thu:............................. " + tongDoanhThu + "</h3>";
+    let hTuthien =  "<h3>" + "Tổng tiền trích từ thiện:.............. " + tienTuThien + "</h3>";
+    let hConlai =  "<h3>" + "Tổng doanh thu sau khi trừ:............ " + tienConLai + "</h3>";
+    let tVeXem = document.getElementById("tinhvexem");
+    tVeXem.innerHTML = hTenPhim + "<br>" + hSoVe + "<br>" + hDoanhThu + "<br>" + hTuthien + "<br>" + hConlai;
+}
+
 // Bài tập nộp
 // Bài tập 1 
 let salary1Day = 100000
@@ -47,7 +67,7 @@ let tinhtoanEl = document.getElementById("tinhtoan");
 tinhtoanEl.onclick = function() {
     // Những câu lệnh bên trong cặp {} sẽ được chạy khi user click vào button 
     let ketQua = salary1Day * tinhtienEl.value;
-    let tdQua = "<p>" + ketQua + "</p>"
+    let tdQua = "<p>" + "Kết quả hiện ra là: " + ketQua + "</p>"
     let tdiv = document.getElementById("ket-qua");
     tdiv.innerHTML = tdQua;
 }
@@ -62,8 +82,9 @@ let tinhTien5 = document.getElementById("tinhtien5");
 let tinhTrungBinh = document.getElementById("tinhTB");
 tinhTrungBinh.onclick = function(){
     let reSult = (parseInt(tinhTien1.value) + parseInt(tinhTien2.value) + parseInt(tinhTien3.value) + parseInt(tinhTien4.value) + parseInt(tinhTien5.value))/5;
-    console.log("Kết quả là: ", reSult);
-    alert("Kết quả là: " + reSult);
+    let pReSult = "<h3>" + "Kết quả hiện ra là: " + reSult + "</h3>"
+    let divTB = document.getElementById("tinh-TB");
+    divTB.innerHTML = pReSult;
 }
 
 // Bài tập 3
@@ -73,8 +94,9 @@ let doitienEl = document.getElementById("doitien");
 let quyDoiEl = document.getElementById("quydoi");
 quyDoiEl.onclick = function(){
     let exChange = doitienEl.value * so1USD;
-    console.log("Kết quả là: ", exChange);
-    alert("Kết quả là: " + exChange);
+    let hExChange = "<h3>" + "Kết quả hiện ra là: " + exChange + "</h3>";
+    let divQD = document.getElementById("tinh-QD");
+    divQD.innerHTML = hExChange;
 }
 
 // Bài tập 4 
@@ -84,20 +106,23 @@ let tinhCVEl = document.getElementById("tinhCV");
 tinhCVEl.onclick = function(){
     let tinhChuvi = (parseInt(chieudaiEl.value) + parseInt(chieurongEl.value))*2;
     let tinhDientich = parseInt(chieudaiEl.value) * parseInt(chieurongEl.value);
-    console.log("Chu vi, diện tích là: ", tinhChuvi, tinhDientich);
-    alert("Chu vi, diện tích là: " + tinhChuvi + " " + tinhDientich);
+    let hCV = "<h3>" + "Chu vi là: " + tinhChuvi + "</h3>";
+    let hDT = "<h3>" + "Diện tích là: " + tinhDientich + "</h3>";
+    let divCV = document.getElementById("tinh-CV");
+    divCV.innerHTML = hCV + "<br>" + hDT;
 }
 
 // Bài tập 5 
 let numberEl = document.getElementById("number");
-
-
 let countnumerEl = document.getElementById("countnumber");
 countnumerEl.onclick = function(){
     let number1El = parseInt(numberEl.value) % 10;
     let numberaEl = parseInt(numberEl.value) - number1El;
     let number2El = numberaEl / 10;
     let countSum = number1El + number2El;
-    console.log("Tổng là: ", countSum);
-    alert("Tính tổng là: " + countSum);
+
+    let hCountSum = "<h3>" + "Kết quả hiện ra là: " + countSum + "</h3>";
+    let divCN = document.getElementById("count-number");
+    divCN.innerHTML = hCountSum;
+
 }

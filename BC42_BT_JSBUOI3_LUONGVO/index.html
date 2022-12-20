@@ -10,9 +10,9 @@
         font-size: 20px;
       }
       div {
-        display: flex;
+        /* display: flex; */
         /* justify-content: space-around; */
-        padding: 10px 0;
+        padding: 5px 0;
       }
       div p {
         font-size: 15px;
@@ -24,6 +24,44 @@
   <body>
     <!-- Mô hình 3 khối  -->
     <!-- bài tập tự luyện 1  -->
+    <h1>Tính cạnh huyền tam giác</h1>
+    <p>Nhập vào chiều dài cạnh AB</p>
+    <input type="text" id="A-B" value="" />
+    <p>Nhập vào chiều dài cạnh AC</p>
+    <input type="text" id="A-C" value="" />
+    <br />
+    <button id="tinh-BC">Kết quả</button>
+    <div id="B-C"></div>
+
+    <!-- Bài tập tự luyện 2  -->
+    <h1>Bài tập tính tổng 3 số</h1>
+    <p>Nhập vào số tự nhiên có chữ 3 số</p>
+    <input type="text" id="so3chu" value="" />
+    <button id="tinh-3so">Kết quả</button>
+    <div id="tinh3so"></div>
+
+    <!-- Bài tập tự luyện 3  -->
+    <h1>Bài tập tính toán vé phim</h1>
+    <div style="display: flex">
+      <p style="padding-right: 20px">Nhập tên phim</p>
+      <input type="text" id="ten-phim" value="" />
+      <p style="padding-right: 20px">Nhập giá vé người lớn</p>
+      <input type="text" id="ve-nglon" value="" />
+    </div>
+    <div style="display: flex">
+      <p style="padding-right: 20px">Nhập giá vé trẻ em</p>
+      <input type="text" id="ve-treem" value="" />
+      <p style="padding-right: 20px">Số lượng vé người lớn</p>
+      <input type="text" id="so-nglon" value="" />
+    </div>
+    <div style="display: flex">
+      <p style="padding-right: 20px">Số lượng vé trẻ em</p>
+      <input type="text" id="so-treem" value="" />
+      <p style="padding-right: 20px">Phần trăm từ thiện %</p>
+      <input type="text" id="tu-thien" value="" />
+    </div>
+    <button id="tinh-ve">Kết quả</button>
+    <div id="tinhvexem"></div>
     <!-- Bài tập nộp  -->
     <!-- Bài tập 1  -->
     <h1>Tính tiền lương nhân viên</h1>
@@ -31,9 +69,9 @@
     <p>Nhập vào số ngày làm việc và ô dưới</p>
     <input type="text" id="tinhtien" value="" />
     <button id="tinhtoan">Kết quả</button>
-    <div class="ket-qua"></div>
+    <h3 id="ket-qua"></h3>
+
     <!-- Bài tập 2 -->
-    <br />
     <br />
     <h1>Tính giá trị trung bình của 5 số thực</h1>
     <div>
@@ -49,6 +87,7 @@
       <input type="text" id="tinhtien5" value="" />
     </div>
     <button id="tinhTB">Kết quả</button>
+    <div id="tinh-TB"></div>
 
     <!-- Bài tập 3 -->
     <h1>Quy đổi tiền</h1>
@@ -56,6 +95,7 @@
     <p>Nhập số USD muốn quy đổi</p>
     <input type="text" id="doitien" value="" />
     <button id="quydoi">Quy Đổi</button>
+    <div id="tinh-QD"></div>
 
     <!-- Bài tập 4  -->
     <h1>Tính chu vi, diện tích hình chữ nhật</h1>
@@ -65,12 +105,14 @@
     <input type="text" id="chieurong" value="" />
     <br />
     <button id="tinhCV">Chu Vi, Diện tích</button>
+    <div id="tinh-CV"></div>
 
     <!-- Bài tập 5  -->
     <h1>Tính tổng 2 ký số</h1>
     <p>Nhập vào 1 số có 2 chữ số</p>
     <input type="text" id="number" value="" />
     <button id="countnumber">Tính tổng</button>
+    <div id="count-number"></div>
     <script src="./index.js"></script>
   </body>
 </html>
