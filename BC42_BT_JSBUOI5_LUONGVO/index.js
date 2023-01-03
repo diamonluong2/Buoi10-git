@@ -62,7 +62,6 @@ reSult.onclick = function ex1(){
 document.getElementById("ket-qua1").onclick = function (){
     let customerEl = document.getElementById("customer").value;
     let kwEl = parseInt(document.getElementById("kw").value);
-    let sumKW;
     if (kwEl<=50) {
         let sumKW = kwEl * 500;
         document.getElementById("ketqua1").innerHTML= `<span> Tôi tên: ${customerEl} Tiền điện: ${sumKW} </span>`

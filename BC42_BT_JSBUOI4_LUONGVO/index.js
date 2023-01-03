@@ -18,7 +18,7 @@ document.getElementById("count").onclick = function ex(){
 
 document.getElementById("chaohoi").onclick = function (){
     let areaSelect = document.getElementById("area").value;
-    document.getElementById("chao-hoi").innerHTML = `<span> Xin chào ${areaSelect} !`
+    document.getElementById("chao-hoi").innerHTML = `<span> Xin chào ${areaSelect} !</span>`
  
 }
 
