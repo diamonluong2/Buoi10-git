@@ -19,14 +19,13 @@ document.getElementById("ket-qua1").onclick = function (){
 
 // Bài tập 2
 document.getElementById("ket-qua2").onclick = function (){
-// let x = parseInt(document.getElementById("input-X").value);
-let x = 2;
-// let n = parseInt(document.getElementById("input-N").value);
-let n = 10;
+let x = parseInt(document.getElementById("input-X").value);
+let n = parseInt(document.getElementById("input-N").value);
 let k = 1;
-let Sum;
+let Sum = 0;
 for(let i = 1;i<=n;i++){
-    Sum += Math.pow(x, i);
+    Sum += Math.pow(x, k);
+    k++
     console.log("Sum: ", Sum);
 }
 }
